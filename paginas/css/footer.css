@@ -1,0 +1,91 @@
+/* Aplicar fuente Montserrat Light */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh; /* Asegura que el cuerpo de la página tenga al menos el alto de la ventana */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos del primer pie de página */
+footer {
+    background-color: #161616; /* Color de fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 20px 0; /* Espaciado vertical */
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Disposición en columna para los elementos del footer */
+    align-items: center; /* Centra horizontalmente los elementos */
+}
+
+/* Contenedor principal del primer footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre las dos divisiones */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 0 20px; /* Espaciado horizontal */
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Redes sociales y contacto */
+.social-media-section, .contact-info-section {
+    flex: 1; /* Ambas secciones ocuparán el mismo espacio */
+    text-align: center; /* Centra el texto en ambas secciones */
+}
+
+.social-media-section h4, .contact-info-section h4 {
+    margin-bottom: 10px; /* Espacio debajo del título */
+    font-size: 16px; /* Tamaño del texto del título */
+    color: #fff; /* Color del texto blanco */
+    font-weight: 300; /* Peso del texto Light */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los íconos de redes sociales */
+    gap: 20px; /* Espacio entre los iconos de redes sociales */
+}
+
+.social-icon {
+    color: #fff; /* Iconos blancos */
+    font-size: 20px; /* Tamaño del ícono */
+    text-decoration: none;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre los elementos de contacto */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el ícono y el texto */
+    justify-content: center; /* Centra horizontalmente el ícono y el texto */
+}
+
+.contact-item i {
+    font-size: 18px; /* Tamaño del ícono */
+    color: #fff; /* Color del ícono blanco */
+}
+
+.contact-item p {
+    margin: 0; /* Elimina el margen del párrafo */
+    color: #fff; /* Color del texto blanco */
+    font-size: 14px; /* Tamaño del texto del contacto */
+    font-weight: 300; /* Peso del texto Light */
+}
+
+/* Estilos del segundo footer (Copyright) */
+.copyright-footer {
+    background-color: #0c0c0c; /* Color de fondo más fuerte */
+    color: white; /* Color del texto blanco */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 10px 0; /* Espaciado vertical */
+    width: 100%; /* Ocupa todo el ancho de la página */
+}

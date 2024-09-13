@@ -1,0 +1,261 @@
+/* Estilos generales para la sección de servicios */
+#services {
+    padding: 60px 0; /* Espaciado arriba y abajo */
+}
+
+#services .container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 0 20px; /* Espaciado horizontal */
+}
+
+#services h2 {
+    text-align: center; /* Centrar el título */
+    font-size: 2.5rem; /* Tamaño del título */
+    color: #333; /* Color del texto */
+    margin-bottom: 40px; /* Espaciado debajo del título */
+}
+
+.services-grid {
+    display: grid; /* Usar grid para la disposición de los elementos */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Disposición responsiva */
+    gap: 30px; /* Espaciado entre los elementos */
+}
+
+.service-item {
+    background: #ffffff; /* Fondo blanco para los elementos */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Centrar el contenido */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el efecto hover */
+}
+
+.service-item:hover {
+    transform: translateY(-10px); /* Elevación en hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+.service-item i {
+    font-size: 3rem; /* Tamaño del ícono */
+    color: #07859b; /* Color del ícono */
+    margin-bottom: 15px; /* Espaciado debajo del ícono */
+}
+
+.service-item h3 {
+    font-size: 1.5rem; /* Tamaño del subtítulo */
+    color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado debajo del subtítulo */
+}
+
+.service-item p {
+    font-size: 1rem; /* Tamaño del párrafo */
+    color: #666; /* Color del texto */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+}
+
+
+
+/* Estilos para el botón */
+.view-example-btn {
+    background-color: #1396be; /* Color naranja */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.view-example-btn:hover {
+    background-color: #056886; /* Color naranja más oscuro */
+}
+
+/* Definir animaciones de entrada y salida */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.7s;
+}
+.modal.fadeIn {
+    display: block;
+    animation: fadeIn 0.7s forwards;
+}
+
+.modal.fadeOut {
+    animation: fadeOut 0.7s forwards;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    
+}
+.modal-content.fadeIn {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-content.fadeOut {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+.close {
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.modal-nav-btn {
+    background-color: #057091;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-nav-btn:hover {
+    background-color: #057091;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+    .modal-image {
+        max-height: 80vh;
+        object-fit: contain;
+    }
+}
+
+/* Animación de entrada del modal */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+/* Estilos para las flechas de navegación */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 35px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 35px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Centrar la imagen en pantallas pequeñas */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        max-width: 600px; /* O el valor máximo que prefieras */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-color: white; /* Asegúrate de que tenga un fondo visible */
+        z-index: 1000; /* Para que aparezca encima de otros elementos */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra si lo deseas */
+        padding: 20px; /* Espacio interno */
+        border-radius: 8px; /* Bordes redondeados */
+    }
+    
+
+    .modal-image {
+        max-height: 80vh;
+        object-fit: contain;
+    }
+
+    .prev, .next {
+        top: 50%;
+        margin-top: -22px;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
